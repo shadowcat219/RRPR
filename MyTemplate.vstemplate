@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>RRPR Scarabot Emulator</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>RRPR Scarabot Emulator</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="RRPR Scarabot Emulator.vcxproj" File="RRPR Scarabot Emulator.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">RRPR Scarabot Emulator.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Emulator.cpp">Emulator.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="main.cpp">main.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="mat_kin.cpp">mat_kin.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="robo_control.cpp">robo_control.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ui_console.cpp">ui_console.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ensc-488.h">ensc-488.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="mat_kin.h">mat_kin.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ui_console.h">ui_console.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="robo_control.h">robo_control.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="glut32.dll">glut32.dll</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="m5apiw32.dll">m5apiw32.dll</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="PowerCubeSim.dll">PowerCubeSim.dll</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

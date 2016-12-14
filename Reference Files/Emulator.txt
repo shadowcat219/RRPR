@@ -1,0 +1,72 @@
+#include <conio.h>
+#include <iostream>
+#include <cstring>
+#include "ensc-488.h"
+
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	//joint variables
+	JOINT q1 = { 0, 0, -100, 0 };
+	JOINT q2 = { 90, 90, -200, 45 };
+	
+	 
+	char ch;
+	double user_input[4];
+	cout << "press Y to initiate interface" << endl;
+	do
+	{
+		// _getch() function waits for user's key entries and stores it to variable ch
+		ch = _getch();
+
+		if (ch == 'y')
+		{
+			/*user interface*/
+			cout << "Enter the joint 1 value - Revolute" << endl;
+			cin >> user_input[0];
+			cout << "Enter the joint 2 value - Revolute" << endl;
+			cin >> user_input[1];
+			cout << "Enter the joint 3 value - Prismatic" << endl;
+			cin >> user_input[2];
+			cout << "Enter the joint 4 value - Revolute" << endl;
+			cin >> user_input[3];
+
+			JOINT joint_var_user = { user_input[0], user_input[1], user_input[2], user_input[3] };
+			//ResetRobot();
+			//GetConfiguration(q1);
+
+			//Grasp(false);
+
+			DisplayConfiguration(joint_var_user);
+
+			//MoveToConfiguration(joint_var_user, false);
+			Grasp(true);
+
+			
+			
+			
+		}
+
+		//if 1 is pressed execute the functions in if-else statement
+		else if (ch == '1')
+		{
+			//DisplayConfiguration(q1);
+			
+			//move to given configuration q2 then to q1
+			MoveToConfiguration(q2, false);
+			MoveToConfiguration(q1, false);
+		}
+		//if 2 is pressed execute the functions in if-else statement
+		else if (ch == '2')
+		{
+			//DisplayConfiguration(q2);
+
+			//move to given configuration q1 then to q2
+			MoveToConfiguration(q1, false);
+			MoveToConfiguration(q2, false);
+		}
+	} while (ch != 27);	// 27 refers to character ESC key to exit the do-while loop
+	
+	return 0;
+}
