@@ -11,17 +11,8 @@
 #include <string>
 #include <cmath>
 #include <ctime>
-#include "mat_kin.h"
-#include "ensc-488.h"
-#include "traj_plan.h"
-#include "DynamicSim.h"
-#include "controller.h"
 
 
-
-#define HEIGHT 4
-#define WIDTH 4
-#define PI 3.14159265359
 
 class robo_control
 {

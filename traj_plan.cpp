@@ -4,7 +4,7 @@
 */
 
 #include "traj_plan.h"
-#include "ensc-488.h"
+//#include "ensc-488.h"
 
 using namespace std;
 traj_plan::traj_plan() {

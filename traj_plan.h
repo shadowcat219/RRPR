@@ -14,11 +14,6 @@
 
 #include "mat_kin.h"
 
-
-
-#define WIDTH 4
-#define RES 30	// the time resolution (ms)
-
 class traj_plan
 {
 private:
