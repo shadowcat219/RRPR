@@ -438,12 +438,12 @@ double** traj_plan::calcDiscreteSpline(double taui, double taui_1, double* coeff
 int traj_plan::numofPoints(double t1, double t2, double t3, double t4)
 {
 	total_time = t1 + t2 + t3 + t4;
-	int samplePoints = ceil(total_time / RES);
+	double samplePoints = ceil(total_time / RES);
 	cout << "Total Time: " << total_time << endl;
 
 	cout << "Number of sample points: " << samplePoints << endl;
 
-	return samplePoints;
+	return (int)samplePoints;
 }
 
 void traj_plan::printM(double** matrix, int height, int width) {

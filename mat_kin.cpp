@@ -183,7 +183,7 @@ double** mat_kin::SOLVE(double* oldJoints, double** Tmatrix)
 	double joint3;
 	double joint4[2];
 
-	double C2, S2, k1, k2, r, gamma, x, y;
+	double C2, S2, k1, k2, r, gamma;
 
 	joints = new double*[HEIGHT];
 	for (int i = 0; i < HEIGHT; i++) {

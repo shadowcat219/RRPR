@@ -7,7 +7,7 @@
 //#include  "ensc-488.h"
 #include "traj_plan.h"
 
-#define PI 3.14159265359
+//#define PI 3.14159265359
 #define g 9.81
 #define b 5*1000
 #define DEG2RAD(x) (x*PI/180.)

@@ -193,7 +193,7 @@ void robo_control::moveCart()
 		cout << "** Second solution is not valid**" << endl;
 		cout << "Soltution 1 is chosen: " << (int)r_matrix[0][0] << ", " << (int)r_matrix[0][1] << ", " << (int)r_matrix[0][2] << ", " << (int)r_matrix[0][3] << endl;
 
-		JOINT q1 = { (int)r_matrix[0][0], (int)r_matrix[0][1], (int)r_matrix[0][2], (int)r_matrix[0][3] };
+		JOINT q1 = { r_matrix[0][0], r_matrix[0][1], r_matrix[0][2], r_matrix[0][3] };
 
 		cl = clock();   //starting time of clock
 		MoveToConfiguration(q1, true);
@@ -222,7 +222,7 @@ void robo_control::moveCart()
 			}
 			if (dist[0] < dist[1]) {
 				cout << "Solution 1 is a shorter distance away" << endl;
-				JOINT q1 = { (int)r_matrix[0][0], (int)r_matrix[0][1], (int)r_matrix[0][2], (int)r_matrix[0][3] };
+				JOINT q1 = { r_matrix[0][0], r_matrix[0][1], r_matrix[0][2], r_matrix[0][3] };
 				cl = clock();   //starting time of clock
 				MoveToConfiguration(q1, true);
 				cl = clock() - cl;  //end point of clock
@@ -235,7 +235,7 @@ void robo_control::moveCart()
 			}
 			else {
 				cout << "Solution 2 is a shorter distance away " << endl;
-				JOINT q1 = { (int)r_matrix[1][0], (int)r_matrix[1][1], (int)r_matrix[0][2], (int)r_matrix[1][3] };
+				JOINT q1 = { r_matrix[1][0], r_matrix[1][1], r_matrix[0][2], r_matrix[1][3] };
 				cl = clock();   //starting time of clock
 				MoveToConfiguration(q1, true);
 				cl = clock() - cl;  //end point of clock
@@ -249,7 +249,7 @@ void robo_control::moveCart()
 		}
 		else {
 			cout << "Solution 1 & 2 are the same" << endl;
-			JOINT q1 = { (int)r_matrix[0][0], (int)r_matrix[0][1], (int)r_matrix[0][2], (int)r_matrix[0][3] };
+			JOINT q1 = { r_matrix[0][0], r_matrix[0][1], r_matrix[0][2], r_matrix[0][3] };
 			cl = clock();   //starting time of clock
 			MoveToConfiguration(q1, true);
 			cl = clock() - cl;  //end point of clock
@@ -496,9 +496,9 @@ void robo_control::trajectoryPlan()
 			}
 			if (!FAIL)
 			{
-				JOINT q1 = { (int)traj_joint0[ii][1], traj_joint1[ii][1], traj_joint2[ii][1], traj_joint3[ii][1] };
-				JOINT q2 = { (int)traj_joint0[ii][2], traj_joint1[ii][2], traj_joint2[ii][2], traj_joint3[ii][2] };
-				JOINT q3 = { (int)traj_joint0[ii][3], traj_joint1[ii][3], traj_joint2[ii][3], traj_joint3[ii][3] };
+				JOINT q1 = { traj_joint0[ii][1], traj_joint1[ii][1], traj_joint2[ii][1], traj_joint3[ii][1] };
+				JOINT q2 = { traj_joint0[ii][2], traj_joint1[ii][2], traj_joint2[ii][2], traj_joint3[ii][2] };
+				JOINT q3 = { traj_joint0[ii][3], traj_joint1[ii][3], traj_joint2[ii][3], traj_joint3[ii][3] };
 				if (MoveWithConfVelAcc(q1, q2, q3) == true && ii != (samplePoints - 1)) //Kara Question: How to get the program to pause (time resoltuion delta t) before reading the next value?
 				{
 					sleep_for(milliseconds(RES));

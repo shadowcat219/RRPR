@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "dynamicSim.h"
 
-#define PI      (3.1415926)
+//#define PI      (3.1415926)
 #define DEG2RAD(x) (x*PI/180.)
 #define RAD2DEG(x) (x*180./PI)
 #define g 9.81
