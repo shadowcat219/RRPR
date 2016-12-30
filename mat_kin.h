@@ -8,9 +8,6 @@
 #include <iomanip>
 //#include  "ensc-488.h"
 
-#define HEIGHT 4
-#define WIDTH 4
-#define PI 3.14159265359
 
 using namespace std;
 

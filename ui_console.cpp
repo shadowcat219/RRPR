@@ -1,4 +1,3 @@
-
 #include "ui_console.h"
 
 void ui_console::welcomeSplash()

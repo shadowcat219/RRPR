@@ -1,5 +1,5 @@
 #include "mat_kin.h"
-#include "ensc-488.h"
+//#include "ensc-488.h"
 using namespace std;
 
 mat_kin::mat_kin()
