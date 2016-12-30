@@ -6,7 +6,6 @@
 #include "dynamicSim.h"
 
 
-
 class controller
 {
 	private:

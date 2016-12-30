@@ -1,7 +1,7 @@
-#include "definitions.h"
+//#include "definitions.h"
 
 #include "ui_console.h"
-//#include "ensc-488.h"
+#include "ensc-488.h"
 #include "traj_plan.h"
 #include "DynamicSim.h"
 #include "controller.h"
